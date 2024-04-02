@@ -48,12 +48,12 @@ const ComboBox = ({
                         disabled={disabled}
                     >
                         <Combobox.Input
-                            className="w-full appearance-none border-none font-VodafoneRg text-xl font-normal text-txt_grey focus:ring-0 outline-none"
+                            className="w-full appearance-none border-none font-VodafoneRg text-lg font-normal text-txt_grey focus:ring-0 outline-none"
                             displayValue={(option) => option.label}
                             onChange={handleInputChange}
                             placeholder="Select an option"
                         />
-                        <Combobox.Button className="absolute inset-y-0 right-0 flex items-center pr-2">
+                        <Combobox.Button className=" absolute inset-y-0 right-0 flex items-center pr-2">
                             <Search />
                         </Combobox.Button>
                     </div>
@@ -64,7 +64,7 @@ const ComboBox = ({
                         leaveTo="opacity-0"
                         afterLeave={() => setQuery('')}
                     >
-                        <Combobox.Options className="absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black/5 focus:outline-none sm:text-sm">
+                        <Combobox.Options className="absolute z-50 mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black/5 focus:outline-none sm:text-sm">
                             {filteredOptions.length === 0 && query !== '' ? (
                                 <div className="relative cursor-default select-none px-4 py-2 text-gray-700">
                                     Nothing found.
@@ -86,8 +86,8 @@ const ComboBox = ({
                                                 </span>
                                             )}
                                         </Combobox.Option>
-                                        {/* Add divider if not the last option */}
-                                        {index !== filteredOptions.length - 1 && <hr className="border-t border-gray-200" />}
+                                        
+                                        {index !== filteredOptions.length - 1 && <hr className="h-px  rounded ml-5 mr-5 bg-brd_g_300" />}
                                     </Fragment>
                                 ))
                             )}
